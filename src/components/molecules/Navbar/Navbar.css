@@ -1,0 +1,53 @@
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 46px;
+  gap: 20px;
+}
+
+.Navbar img {
+  cursor: pointer;
+}
+
+.Navbar button {
+  padding: 16px 24px;
+  font-size: 18px;
+  line-height: 27px;
+  color: #4cbc9a;
+  background: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Navbar button span {
+  width: 160px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Navbar button img {
+  filter: invert(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) rightness(100%)
+    contrast(100%);
+}
+
+.Navbar button.selected {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  background: #4cbc9a;
+  color: #ffffff;
+}
+
+.Navbar button.selected img {
+  filter: brightness(200%) contrast(500%);
+}
