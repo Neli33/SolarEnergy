@@ -18,8 +18,10 @@ export default function CadastroUnidades({
   const [formulario, setFormulario] = useState(
     unidadeSelecionada || emptyState
   );
+  console.log("Estado do formulário:", formulario);
 
   const salvarFormulario = (event) => {
+    console.log("Salvar formulário acionado");
     event.preventDefault();
     if (unidadeSelecionada) {
       fetch(`http://localhost:3333/unidades/${unidadeSelecionada.id}`, {

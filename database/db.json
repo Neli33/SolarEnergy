@@ -1,0 +1,52 @@
+{
+  "unidades": [
+    {
+      "id": "abc",
+      "apelido": "Padaria São Luiz",
+      "local": "Centro ",
+      "marca": "Britania",
+      "modelo": "black",
+      "ativa": true
+    },
+    {
+      "id": "def",
+      "apelido": "gtew",
+      "local": "Rio de Janeiro ",
+      "marca": "Bosh",
+      "modelo": "black",
+      "ativa": false
+    },
+    {
+      "apelido": "Casa Rosa",
+      "local": "São Jose",
+      "marca": "Britania",
+      "modelo": "green",
+      "ativa": true,
+      "id": "hHIAYd1"
+    },
+    {
+      "apelido": "Marina",
+      "local": "Salvador",
+      "marca": "Bosh",
+      "modelo": "green",
+      "ativa": false,
+      "id": "i8cCt6Z"
+    },
+    {
+      "apelido": "Casa Verde",
+      "local": "Campeche",
+      "marca": "Bosh",
+      "modelo": "red",
+      "ativa": true,
+      "id": "jV7ivbY"
+    },
+    {
+      "apelido": "Casa Azul",
+      "local": "Campeche",
+      "marca": "Bosh",
+      "modelo": "black",
+      "ativa": false,
+      "id": "6P6SBNL"
+    }
+  ]
+}
