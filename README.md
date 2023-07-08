@@ -8,7 +8,8 @@ Solar Energy.
   Dashboard, Unidade Consumidora e Cadastro de energia gerada.
 - Uma tela Dashboard contendo 4 cards e um grafico de linha.
 - Uma tela de Listagem de unidades (exibida na rota /unidades) contendo uma tabela com as colunas ID, Apelido, Local, Marca e Modelo, além dos botões Editar e Remover.
-- Uma tela de cadastro de unidade, contendo um formulário com os campos Apelido, Local, Marca, Modelo e Status (Checkbox) . Ao clicar no botão salvar, chamar o evento de onSubmit e cadastrar unidade na API. Todos os campos do formulário são obrigatórios
+- Uma tela de cadastro de unidade, contendo um formulário com os campos Apelido, Local, Marca, Modelo e Status (Checkbox) . Ao clicar no botão salvar, chamar o evento de 
+  onSubmit e cadastrar unidade na API. Todos os campos do formulário são obrigatórios
 - Uma tela de Lançamento de geração mensal contendo um formulário.
 
 ## Para acessar o projeto é necessário digitar um dos seguintes e-mail e senha:
@@ -23,7 +24,7 @@ Solar Energy.
 
 A aplicação tem seguintes rotas:
 
-/ leva para login
+/      leva para login
 /dashboard
 /unidades
 /geracoes
@@ -40,9 +41,9 @@ excluir informações cadastro de unidade geradora e cadastro de energia gerada;
 - React + vite;
 - JavaScript, HTML e CSS;
 - react-router-dom para rotas;
-  -bibliote react chart js
-  -biblioteca
-  - Git com GitHub;
+- biblioteca react chart js
+- biblioteca
+- Git com GitHub;
 
 ## Instalação
 
