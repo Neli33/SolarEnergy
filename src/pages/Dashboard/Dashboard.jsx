@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "../../components";
-import { Cards } from "../../components";
+import { Cards, Chart } from "../../components";
 import unidadesData from "../../../database/db.json";
 
 export default function Dashboard() {
@@ -36,6 +36,7 @@ export default function Dashboard() {
         totalEnergia={totalEnergia}
         mediaEnergia={mediaEnergia}
       />
+      <Chart />
     </Container>
   );
 }

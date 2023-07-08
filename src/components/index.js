@@ -5,3 +5,4 @@ export { default as CadastroEnergia } from "./organisms/Cadastros/CadastroEnergi
 export { default as ListaUnidades } from "./organisms/UnidadesLista/ListaUnidades";
 export { default as Crad } from "./molecules/Card/Card";
 export { default as Cards } from "./organisms/Cards/Cards";
+export { default as Chart } from "./organisms/Chart/Chart";
