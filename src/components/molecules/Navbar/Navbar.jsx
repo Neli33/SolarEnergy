@@ -23,7 +23,7 @@ export default function Navbar() {
 
       <button
         className={isSelected("/dashboard")}
-        onClick={() => handleClick("/")}
+        onClick={() => handleClick("/dashboard")}
       >
         <img src={dashboard} alt="dashboard" />
         <span>Dashboard</span>

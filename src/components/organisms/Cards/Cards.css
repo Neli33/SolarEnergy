@@ -1,0 +1,14 @@
+.cards {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  max-width: 258px;
+  height: 134px;
+  border-radius: 20px;
+  border: 1px solid #dfe0eb;
+  font-family: Mulish;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+}

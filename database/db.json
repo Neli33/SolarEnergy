@@ -65,12 +65,20 @@
       "id": "1irAo0U"
     },
     {
-      "apelido": "",
-      "local": "",
-      "marca": "",
-      "modelo": "",
-      "ativa": false,
+      "apelido": "Padaria",
+      "local": "São Jose",
+      "marca": "nnukk.k.",
+      "modelo": "1234567",
+      "ativa": true,
       "id": "edV9RVf"
+    },
+    {
+      "apelido": "Marina",
+      "local": "Campeche",
+      "marca": "Filips",
+      "modelo": "htu87",
+      "ativa": true,
+      "id": "RLbyFcC"
     }
   ],
   "geracoes": [
@@ -133,6 +141,12 @@
       "mes": "",
       "kwGerado": "",
       "id": 10
+    },
+    {
+      "unidadeGeradora": "abc",
+      "mes": "Junho ",
+      "kwGerado": "8",
+      "id": 11
     }
   ]
 }
