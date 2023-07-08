@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./Input.css";
 
 export default function Input({ icon, ...props }) {
   return (

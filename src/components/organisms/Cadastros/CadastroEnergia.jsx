@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Input from "../../atoms/Input/Input";
+import Select from "../../atoms/Select/Select";
 
 export default function CadastroEnergia({
   setOpenFormulario,
-  unidadeSelecionada,
-  setUnidadeSelecionada,
+  unidadesCadastradas,
 }) {
   const emptyState = {
     unidadeGeradora: "",
@@ -13,99 +13,86 @@ export default function CadastroEnergia({
     kwGerado: "",
   };
 
-  const [formulario, setFormulario] = useState(
-    unidadeSelecionada || emptyState
-  );
+  const [formulario, setFormulario] = useState(emptyState);
 
   const salvarFormulario = (event) => {
     event.preventDefault();
-    if (unidadeSelecionada) {
-      fetch(`http://localhost:3333/unidades/${unidadeSelecionada.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formulario),
+    console.log(formulario);
+    fetch("http://localhost:3333/geracoes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formulario),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to create generation");
+        }
+        // Limpar o formulário
+        setFormulario(emptyState);
+        setOpenFormulario(false);
+      })
+      .catch((error) => {
+        console.error(error);
       });
-    } else {
-      fetch("http://localhost:3333/unidades", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formulario),
-      });
-    }
-    setUnidadeSelecionada(emptyState);
-    setOpenFormulario(false);
   };
+
+  const handleUnidadeGeradoraChange = (event) => {
+    const { value } = event.target;
+    setFormulario((prevState) => ({
+      ...prevState,
+      unidadeGeradora: value,
+    }));
+  };
+
   return (
     <section>
       <h2>Cadastro de Unidade Geradora</h2>
       <form onSubmit={salvarFormulario}>
-        <label htmlFor="apelido">Apelido</label>
+        <label htmlFor="unidadeGeradora">Unidade Geradora</label>
+        <Select
+          name="unidadeGeradora"
+          id="unidadeGeradora"
+          value={formulario.unidadeGeradora}
+          onChange={(event) => {
+            const { value } = event.target;
+            setFormulario((prevState) => ({
+              ...prevState,
+              unidadeGeradora: value,
+            }));
+          }}
+          options={unidadesCadastradas.map((unidade) => ({
+            value: unidade.id,
+            label: unidade.apelido,
+          }))}
+        />
+
+        <label htmlFor="mes">Mês</label>
         <Input
           type="text"
-          name="apelido"
-          id="apelido"
-          value={formulario.apelido}
+          name="mes"
+          id="mes"
+          value={formulario.mes}
           onChange={(event) => {
-            setFormulario({
-              ...formulario,
-              apelido: event.target.value,
-            });
+            const { value } = event.target;
+            setFormulario((prevState) => ({
+              ...prevState,
+              mes: value,
+            }));
           }}
         />
 
-        <label htmlFor="local">Local</label>
+        <label htmlFor="kwGerado">Total de kW Gerado</label>
         <Input
-          type="text"
-          name="local"
-          id="local"
-          value={formulario.local}
+          type="number"
+          name="kwGerado"
+          id="kwGerado"
+          value={formulario.kwGerado}
           onChange={(event) => {
-            setFormulario({
-              ...formulario,
-              local: event.target.value,
-            });
-          }}
-        />
-
-        <label htmlFor="marca">Marca</label>
-        <Input
-          type="text"
-          name="marca"
-          id="marca"
-          value={formulario.marca}
-          onChange={(event) => {
-            setFormulario({
-              ...formulario,
-              marca: event.target.value,
-            });
-          }}
-        />
-
-        <label htmlFor="modelo">Modelo</label>
-        <Input
-          type="text"
-          name="modelo"
-          id=""
-          value={formulario.modelo}
-          onChange={(event) => {
-            setFormulario({
-              ...formulario,
-              modelo: event.target.value,
-            });
-          }}
-        />
-
-        <label htmlFor="ativo">Ativo</label>
-        <input
-          type="checkbox"
-          name="active"
-          id=""
-          checked={formulario.ativa}
-          onChange={(event) => {
-            setFormulario({
-              ...formulario,
-              ativa: event.target.checked,
-            });
+            const { value } = event.target;
+            setFormulario((prevState) => ({
+              ...prevState,
+              kwGerado: value,
+            }));
           }}
         />
 
@@ -114,8 +101,13 @@ export default function CadastroEnergia({
     </section>
   );
 }
+
 CadastroEnergia.propTypes = {
   setOpenFormulario: PropTypes.func.isRequired,
-  unidadeSelecionada: PropTypes.object,
-  setUnidadeSelecionada: PropTypes.func,
+  unidadesCadastradas: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      apelido: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };

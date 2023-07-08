@@ -3,7 +3,7 @@
     {
       "id": "abc",
       "apelido": "Padaria São Luiz",
-      "local": "Centro ",
+      "local": "Centro",
       "marca": "Britania",
       "modelo": "black",
       "ativa": true
@@ -11,42 +11,128 @@
     {
       "id": "def",
       "apelido": "gtew",
-      "local": "Rio de Janeiro ",
+      "local": "Rio de Janeiro",
+      "marca": "Bosh",
+      "modelo": "black",
+      "ativa": false
+    },
+    {
+      "id": "hHIAYd1",
+      "apelido": "Casa Rosa",
+      "local": "São Jose",
+      "marca": "Britania",
+      "modelo": "green",
+      "ativa": true
+    },
+    {
+      "id": "i8cCt6Z",
+      "apelido": "Marina",
+      "local": "Salvador",
+      "marca": "Bosh",
+      "modelo": "green",
+      "ativa": false
+    },
+    {
+      "id": "jV7ivbY",
+      "apelido": "Casa Verde",
+      "local": "Campeche",
+      "marca": "Bosh",
+      "modelo": "red",
+      "ativa": true
+    },
+    {
+      "id": "6P6SBNL",
+      "apelido": "Casa Azul",
+      "local": "Campeche",
       "marca": "Bosh",
       "modelo": "black",
       "ativa": false
     },
     {
       "apelido": "Casa Rosa",
-      "local": "São Jose",
-      "marca": "Britania",
+      "local": "Bahia",
+      "marca": "Filips",
       "modelo": "green",
       "ativa": true,
-      "id": "hHIAYd1"
+      "id": "sz6EHE5"
     },
     {
-      "apelido": "Marina",
-      "local": "Salvador",
-      "marca": "Bosh",
-      "modelo": "green",
-      "ativa": false,
-      "id": "i8cCt6Z"
-    },
-    {
-      "apelido": "Casa Verde",
-      "local": "Campeche",
-      "marca": "Bosh",
-      "modelo": "red",
-      "ativa": true,
-      "id": "jV7ivbY"
-    },
-    {
-      "apelido": "Casa Azul",
-      "local": "Campeche",
-      "marca": "Bosh",
+      "apelido": "Casa Rosa",
+      "local": "Bahia",
+      "marca": "filips",
       "modelo": "black",
+      "ativa": true,
+      "id": "1irAo0U"
+    },
+    {
+      "apelido": "",
+      "local": "",
+      "marca": "",
+      "modelo": "",
       "ativa": false,
-      "id": "6P6SBNL"
+      "id": "edV9RVf"
+    }
+  ],
+  "geracoes": [
+    {
+      "unidadeGeradora": "hHIAYd1",
+      "mes": "Junho ",
+      "kwGerado": "12",
+      "id": 1
+    },
+    {
+      "unidadeGeradora": "hHIAYd1",
+      "mes": "abril",
+      "kwGerado": "60",
+      "id": 2
+    },
+    {
+      "unidadeGeradora": "",
+      "mes": "Junho ",
+      "kwGerado": "20",
+      "id": 3
+    },
+    {
+      "unidadeGeradora": "",
+      "mes": "julho",
+      "kwGerado": "17",
+      "id": 4
+    },
+    {
+      "unidadeGeradora": "abc",
+      "mes": "julho",
+      "kwGerado": "10",
+      "id": 5
+    },
+    {
+      "unidadeGeradora": "abc",
+      "mes": "maio",
+      "kwGerado": "18",
+      "id": 6
+    },
+    {
+      "unidadeGeradora": "1irAo0U",
+      "mes": "maio",
+      "kwGerado": "85",
+      "id": 7
+    },
+    {
+      "unidadeGeradora": "abc",
+      "mes": "maio",
+      "kwGerado": "20",
+      "id": 8
+    },
+    {
+      "unidadeGeradora": "1irAo0U",
+      "mes": "julho",
+      "kwGerado": "46",
+      "id": 9
+    },
+    {
+      "unidadeGeradora": "",
+      "mes": "",
+      "kwGerado": "",
+      "id": 10
     }
   ]
 }
